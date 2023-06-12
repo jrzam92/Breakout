@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class BloqueGold : Bloque
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void RebotarBola()
     {
-        
+        base.RebotarBola();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+}
 }

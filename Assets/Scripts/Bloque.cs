@@ -8,7 +8,9 @@ public class Bloque : MonoBehaviour
     ///===Congelamiento de bloque se disminuye la fuerza de bloque 
     ///===Velocidad a pelota cada vez que toque el bloque 
     ///===Fuego de bloque aumento de fuerza de bloque
-    ///
+    /// <summary>
+    /// debuff al jugador dependiendo de que bloque pueda tocar este puede ir mas rapido o mas lento
+    /// </summary>
 
     public int resistencia = 1;
     // Start is called before the first frame update
