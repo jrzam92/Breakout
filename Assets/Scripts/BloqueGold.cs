@@ -9,4 +9,4 @@ public class BloqueGold : Bloque
         base.RebotarBola();
     }
 }
-}
+

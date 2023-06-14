@@ -13,9 +13,12 @@ GameObject:
   - component: {fileID: 4748643117886490047}
   - component: {fileID: 8985597815112812068}
   - component: {fileID: 2147841497445532621}
+  - component: {fileID: 8025933709976535470}
+  - component: {fileID: -917467289079352014}
+  - component: {fileID: -941915828034234581}
   m_Layer: 0
   m_Name: Jugador
-  m_TagString: Untagged
+  m_TagString: Jugador
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115,3 +118,45 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 124
   m_CollisionDetection: 3
+--- !u!114 &8025933709976535470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 923817722753822285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 279d750b1b11e3a48b92eb2d7a7f56d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  limitX: 23
+  VelocidadPaaddle: 0.5
+--- !u!114 &-917467289079352014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 923817722753822285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 279d750b1b11e3a48b92eb2d7a7f56d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  limitX: 23
+  VelocidadPaaddle: 10
+--- !u!114 &-941915828034234581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 923817722753822285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 279d750b1b11e3a48b92eb2d7a7f56d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  limitX: 23
+  VelocidadPaaddle: 10
