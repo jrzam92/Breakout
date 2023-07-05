@@ -1,6 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Bloque : MonoBehaviour
 {
@@ -11,12 +14,32 @@ public class Bloque : MonoBehaviour
     /// <summary>
     /// debuff al jugador dependiendo de que bloque pueda tocar este puede ir mas rapido o mas lento
     /// </summary>
-
+    public Opciones opciones;
     public int resistencia = 1;
+    public UnityEvent aumentarPuntaje;
+
+    //Este se usa cuando algo choca con este objeto
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Bola")
+        {
+            RebotarBola(collision);
+        }
+    }
+
+    public virtual void RebotarBola(Collision collision)
+    {
+        Vector3 direccion = collision.contacts[0].point-transform.position;
+        direccion = direccion.normalized;
+        collision.rigidbody.velocity = collision.gameObject.GetComponent<Bola>().velocidadBola * direccion;
+        resistencia--;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        opciones=new Opciones();
+        opciones.CambiarDificultad(resistencia);
     }
 
     // Update is called once per frame
@@ -24,6 +47,7 @@ public class Bloque : MonoBehaviour
     {
         if (resistencia <= 0)
         {
+            aumentarPuntaje.Invoke();
             Destroy(this.gameObject);
         }
     }
