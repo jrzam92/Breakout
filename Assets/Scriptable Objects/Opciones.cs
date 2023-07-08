@@ -19,8 +19,39 @@ public class Opciones : PuntajePersistente
     {
         velocidadBola += nuevaVelocidad;
     }
-    public void CambiarDificultad(int nuevaDificultad)
+
+    public float CambiarVelocidadBola(float nuevaDificultad)
+    {
+        float nuevaVelocidad = 0.0f;
+        NivelDificultad = (dificultad)nuevaDificultad;
+        switch (NivelDificultad)
+        {
+            case dificultad.facil:
+                nuevaVelocidad = 20.0f;
+                break;
+            case dificultad.normal:
+                nuevaVelocidad = 30.0f;
+                break;
+            case dificultad.dificil:
+                nuevaVelocidad =40.0f;
+                break;
+        }
+        return nuevaVelocidad;
+    }
+    public void CambiarDificultad(int nuevaDificultad,int resistencia=0)
     {
         NivelDificultad = (dificultad)nuevaDificultad;
+        switch (NivelDificultad)
+        {
+            case dificultad.facil:
+                resistencia = resistencia;
+                break; 
+            case dificultad.normal:
+                resistencia += resistencia;
+                break;
+            case dificultad.dificil:
+                resistencia += resistencia + 1;
+                break;
+        }
     }
 }

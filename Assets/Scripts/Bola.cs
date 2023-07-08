@@ -7,7 +7,9 @@ public class Bola : MonoBehaviour
 {
      
     public bool isGameStarted=false;
-    [SerializeField] public float velocidadBola = 10.0f;
+    [SerializeField] public float velocidadBola = 0;
+    public Opciones.dificultad dificultad;
+    public Opciones opciones;
     Vector3 ultimaPosicion=Vector3.zero;
     Vector3 direccion=Vector3.zero;
     Rigidbody rigidbody;
@@ -16,6 +18,7 @@ public class Bola : MonoBehaviour
 
     private void Awake()
     {
+        
         control = GetComponent<ControlBordes>();
         
     }
@@ -85,6 +88,9 @@ public class Bola : MonoBehaviour
     private void FixedUpdate()
     {
         ultimaPosicion=transform.position;
+        opciones=new Opciones();
+        velocidadBola = opciones.CambiarVelocidadBola(((int)dificultad));
+        print(velocidadBola);
     }
     private void LateUpdate()
     {

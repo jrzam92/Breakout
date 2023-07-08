@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class BloqueBronce : Bloque
 {
+    
     void Start()
     {
         resistencia = 2;
-        opciones = new Opciones();
-        opciones.CambiarDificultad(resistencia);
+   
     }
     public override void RebotarBola(Collision collision)
     {

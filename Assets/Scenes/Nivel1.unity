@@ -279,6 +279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6430f3ae7e5330e4484820bf6a3ddbfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dificultad: 0
   opciones: {fileID: 0}
   resistencia: 1
   aumentarPuntaje:
@@ -3517,45 +3518,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 883306173}
   m_CullTransparentMesh: 1
---- !u!1 &886946724 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8107871901159033058, guid: e9d400a086e4e41469d290e2ea4e06e0, type: 3}
-  m_PrefabInstance: {fileID: 1200763513}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &886946725 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 592489448089809298, guid: e9d400a086e4e41469d290e2ea4e06e0, type: 3}
   m_PrefabInstance: {fileID: 1200763513}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &886946726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 886946724}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d6704279a26e994aa2cf5114e1110a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  opciones: {fileID: 0}
-  resistencia: 1
-  aumentarPuntaje:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 963194229}
-        m_TargetAssemblyTypeName: Puntaje, Assembly-CSharp
-        m_MethodName: AumentarPuntaje
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 20
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &910363406
 GameObject:
   m_ObjectHideFlags: 0
@@ -3868,6 +3835,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e5c3bb3c1953044aeba21ac3077dc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dificultad: 0
   opciones: {fileID: 0}
   resistencia: 1
   aumentarPuntaje:
@@ -3885,6 +3853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e5c3bb3c1953044aeba21ac3077dc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dificultad: 0
   opciones: {fileID: 0}
   resistencia: 1
   aumentarPuntaje:
@@ -4054,6 +4023,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e5c3bb3c1953044aeba21ac3077dc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dificultad: 0
   opciones: {fileID: 0}
   resistencia: 1
   aumentarPuntaje:
@@ -4071,6 +4041,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8e5c3bb3c1953044aeba21ac3077dc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dificultad: 0
   opciones: {fileID: 0}
   resistencia: 1
   aumentarPuntaje:
@@ -4522,6 +4493,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -1906585723120982959, guid: 7619b4e503ffe7d4880e26eededd1b87, type: 3}
+      propertyPath: opciones
+      value: 
+      objectReference: {fileID: 11400000, guid: c14316024ce39c3499d7d704c1942064, type: 2}
+    - target: {fileID: -1906585723120982959, guid: 7619b4e503ffe7d4880e26eededd1b87, type: 3}
+      propertyPath: dificultad
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1906585723120982959, guid: 7619b4e503ffe7d4880e26eededd1b87, type: 3}
+      propertyPath: velocidadBola
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -1906585723120982959, guid: 7619b4e503ffe7d4880e26eededd1b87, type: 3}
       propertyPath: BolaDestruida.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1498801382}
@@ -4816,7 +4799,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 592489448089809298, guid: e9d400a086e4e41469d290e2ea4e06e0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -305.75
+      value: -305.3
       objectReference: {fileID: 0}
     - target: {fileID: 592489448089809298, guid: e9d400a086e4e41469d290e2ea4e06e0, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4866,7 +4849,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bloque_piedra (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2521498396622146425, guid: e9d400a086e4e41469d290e2ea4e06e0, type: 3}
+    - {fileID: 9119867530843533378, guid: e9d400a086e4e41469d290e2ea4e06e0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e9d400a086e4e41469d290e2ea4e06e0, type: 3}
 --- !u!1 &1259783984
 GameObject:
@@ -5329,7 +5314,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7360623534711093640, guid: 71c96c26676081c408017b944d80869b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -313.04
+      value: -312.2
       objectReference: {fileID: 0}
     - target: {fileID: 7360623534711093640, guid: 71c96c26676081c408017b944d80869b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5395,6 +5380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e36dec3ec22f43f468b03cbe27d483a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dificultad: 0
   opciones: {fileID: 0}
   resistencia: 1
   aumentarPuntaje:
@@ -5823,6 +5809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e36dec3ec22f43f468b03cbe27d483a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dificultad: 0
   opciones: {fileID: 0}
   resistencia: 1
   aumentarPuntaje:

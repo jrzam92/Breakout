@@ -14,8 +14,9 @@ public class Bloque : MonoBehaviour
     /// <summary>
     /// debuff al jugador dependiendo de que bloque pueda tocar este puede ir mas rapido o mas lento
     /// </summary>
+    public Opciones.dificultad dificultad;
     public Opciones opciones;
-    public int resistencia = 1;
+    public int resistencia = 0;
     public UnityEvent aumentarPuntaje;
 
     //Este se usa cuando algo choca con este objeto
@@ -38,8 +39,10 @@ public class Bloque : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        opciones=new Opciones();
-        opciones.CambiarDificultad(resistencia);
+        
+       opciones.CambiarDificultad(((int)dificultad), resistencia);
+
+
     }
 
     // Update is called once per frame
